@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """SessionStart hook: keeps this machine's personal Claude Code setup current, without asking Claude to do anything.
 
-1. Writes 'gsoli-setup: ok' in the session context, so the skill configura-claude is not run again.
-2. Copies regole-globali.md of the skill configura-claude (synced from claude.ai) to ~/.claude/CLAUDE.md
+1. Writes 'gsoli-setup: ok' in the session context, so the skill configura-pc is not run again.
+2. Copies regole-globali.md of the skill configura-pc (synced from claude.ai) to ~/.claude/CLAUDE.md
    when they differ, keeping a dated copy of the previous file.
 3. At most once a day, at startup, starts install.py --check in the background to update this plugin.
 Does nothing but step 1 on the main PC (~/.claude/gsoli-skills.source). Never fails the session.
@@ -24,7 +24,7 @@ INSTALL = os.path.join(CLAUDE_DIR, "plugins", "marketplaces", "gsoli-skills", "i
 
 
 def sync_rules():
-    found = glob.glob(os.path.join(CLAUDE_DIR, "skills", "synced", "*", "configura-claude", "regole-globali.md"))
+    found = glob.glob(os.path.join(CLAUDE_DIR, "skills", "synced", "*", "configura-pc", "regole-globali.md"))
     if not found:
         return None
     src = max(found, key=os.path.getmtime)
