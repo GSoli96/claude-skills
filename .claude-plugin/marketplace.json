@@ -1,0 +1,14 @@
+{
+  "name": "gsoli-skills",
+  "description": "Hook e installazione per le skill personali di GSoli96 in Claude Code",
+  "owner": {
+    "name": "GSoli96"
+  },
+  "plugins": [
+    {
+      "name": "gsoli-setup",
+      "source": "./plugins/gsoli-setup",
+      "description": "Hook di avvio: propone i file di progetto per Claude nelle cartelle nuove e ricorda TO_CONTINUE.md"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "gsoli-setup",
+  "description": "Hook di avvio per la skill scaffolding-project-files: propone i file di progetto per Claude nelle cartelle nuove e ricorda di leggere TO_CONTINUE.md",
+  "author": {
+    "name": "GSoli96"
+  }
+}
